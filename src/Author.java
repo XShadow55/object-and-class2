@@ -26,6 +26,6 @@ public class Author {
         return firstName.equals(c2.firstName);
     }
     public int hashCode(){
-        return java.util.Objects.hashCode(firstName);
+        return java.util.Objects.hash(firstName,lastName) ;
     }
 }
