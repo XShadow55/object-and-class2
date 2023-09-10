@@ -7,7 +7,8 @@ public class Author {
         this.firstName = fistName;
         this.lastName = lastName;
     }
-    public String toString(){
+
+    public String toString() {
         return firstName + " " + lastName;
     }
 
@@ -18,14 +19,16 @@ public class Author {
     public String getLastName() {
         return this.lastName;
     }
-    public boolean equals(Object a){
-        if (this.getClass() != a.getClass()){
+
+    public boolean equals(Object a) {
+        if (this.getClass() != a.getClass()) {
             return false;
         }
         Author c2 = (Author) a;
-        return firstName.equals(c2.firstName);
+        return firstName.equals(c2.firstName) && lastName.equals(c2.lastName);
     }
-    public int hashCode(){
-        return java.util.Objects.hash(firstName,lastName) ;
+
+    public int hashCode() {
+        return java.util.Objects.hash(firstName, lastName);
     }
 }
