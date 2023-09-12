@@ -4,16 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
         Author nameAuthor = new Author("Боб", "Ватсон");
-        Book name = new Book("Война и мир ", nameAuthor);
+        Book name = new Book("Смерть в луже ", nameAuthor);
         System.out.println(name.toString());
 
         name.setYear(1333);
         System.out.println(name.toString());
-        Author nameAuthor1 = new Author("Боб", "Ватсон");
+        Author nameAuthor1 = new Author("Бобf", "Ватсон");
         Book name1 = new Book("Смерть в луже ", nameAuthor1);
-
+        name1.setYear(1333);
         System.out.println(name1.hashCode());
-        System.out.println(nameAuthor.equals(nameAuthor1));
+        System.out.println(name.equals(name1));
         System.out.println(name1.toString());
         name1.setYear(2023);
         System.out.println(name1.toString());

@@ -19,11 +19,11 @@ public class Book {
             return false;
         }
         Book c2 = (Book) a;
-        return nameBook.equals(c2.nameBook) && year == c2.year;
+        return nameBook.equals(c2.nameBook) && year == c2.year && nameAuthor.equals(c2.nameAuthor);
     }
 
     public int hashCode() {
-        return java.util.Objects.hash(nameBook,year);
+        return java.util.Objects.hash(nameBook,year,nameAuthor);
     }
 
     public String getNameBook() {
